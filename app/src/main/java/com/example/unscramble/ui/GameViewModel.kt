@@ -121,11 +121,14 @@ class GameViewModel : ViewModel() {
 
     private fun shuffleCurrentWord(word: String): String {
         val tempWord = word.toCharArray()
+
         // Scramble the word
-        tempWord.shuffle()
-        while (String(tempWord) == word) {
-            tempWord.shuffle()
-        }
+        tempWord.reverse()
+        //tempWord.shuffle()
+        //while (String(tempWord) == word) {
+        //    tempWord.shuffle()
+        //}
+
         return String(tempWord)
     }
 
